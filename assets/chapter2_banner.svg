@@ -1,79 +1,432 @@
-<svg width="900" height="90" viewBox="0 0 900 90" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgArsenal" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0d000a"/>
-      <stop offset="50%" style="stop-color:#1a0010"/>
-      <stop offset="100%" style="stop-color:#0d000a"/>
+    <linearGradient id="pageBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#08000f"/>
+      <stop offset="100%" style="stop-color:#100018"/>
     </linearGradient>
-    <filter id="arrowGlow">
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0828"/>
+      <stop offset="100%" style="stop-color:#0f0518"/>
+    </linearGradient>
+    <linearGradient id="cardHover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a1040"/>
+      <stop offset="100%" style="stop-color:#1a0828"/>
+    </linearGradient>
+    <linearGradient id="sectionGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#FFD700;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#FFD700"/>
+      <stop offset="80%" style="stop-color:#FFD700;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="titleGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="shaftGold" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#8B6914"/>
-      <stop offset="100%" style="stop-color:#FFD700"/>
-    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#FFD700" flood-opacity="0.08"/>
+    </filter>
   </defs>
 
-  <rect width="900" height="90" fill="url(#bgArsenal)" rx="6"/>
-  <rect x="0" y="0" width="4" height="90" fill="#FF8C00" rx="2"/>
-  <rect x="896" y="0" width="4" height="90" fill="#FF8C00" rx="2"/>
+  <!-- Page background -->
+  <rect width="900" height="1100" fill="url(#pageBg)"/>
 
-  <!-- Section label -->
-  <text x="450" y="22" font-family="Georgia, serif" font-size="11" fill="#FFA500" letter-spacing="4" text-anchor="middle" opacity="0.9">CHAPTER II  ·  THE ARSENAL</text>
-  <line x1="200" y1="28" x2="700" y2="28" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+  <!-- Subtle star field -->
+  <circle cx="50" cy="80" r="1" fill="#FFD700" opacity="0.3"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="820" cy="120" r="1" fill="#FFD700" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="440" cy="50" r="1.2" fill="#FFD700" opacity="0.3"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="750" cy="600" r="1" fill="#FFD700" opacity="0.25"><animate attributeName="opacity" values="0.25;0.6;0.25" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="120" cy="750" r="1" fill="#FFD700" opacity="0.2"><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.5s" repeatCount="indefinite"/></circle>
 
-  <!-- 5 animated arrows flying left to right at different speeds/heights -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SECTION 1: THE DIVINE LANGUAGES (Core Languages)      -->
+  <!--  Inspired by: The sacred Vedas — root of all knowledge  -->
+  <!-- ═══════════════════════════════════════════════════════ -->
 
-  <!-- Arrow 1 — slowest, top -->
-  <g filter="url(#arrowGlow)">
-    <line x1="-100" y1="48" x2="-40" y2="48" stroke="url(#shaftGold)" stroke-width="2.5" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    </line>
-    <polygon points="-40,44 -40,52 -28,48" fill="#FFD700">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    </polygon>
-    <path d="M-100,48 Q-108,43 -100,46" fill="#8B4513">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="4s" begin="0s" repeatCount="indefinite"/>
-    </path>
+  <!-- Section header -->
+  <line x1="40" y1="55" x2="860" y2="55" stroke="url(#sectionGold)" stroke-width="0.8"/>
+  <!-- Lotus center ornament -->
+  <g transform="translate(450,55)">
+    <circle r="8" fill="#08000f" stroke="#FFD700" stroke-width="1"/>
+    <circle r="4" fill="#FFD700" opacity="0.9"/>
   </g>
+  <line x1="40" y1="100" x2="860" y2="100" stroke="url(#sectionGold)" stroke-width="0.5" opacity="0.3"/>
 
-  <!-- Arrow 2 — faster, lower -->
-  <g filter="url(#arrowGlow)" opacity="0.85">
-    <line x1="-100" y1="62" x2="-40" y2="62" stroke="url(#shaftGold)" stroke-width="2" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
-    </line>
-    <polygon points="-40,58 -40,66 -28,62" fill="#FFA500">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
-    </polygon>
-    <path d="M-100,62 Q-108,57 -100,60" fill="#A0522D">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="2.8s" begin="0.6s" repeatCount="indefinite"/>
-    </path>
-  </g>
+  <text x="450" y="42" font-family="Georgia, serif" font-size="10" fill="#FFA500"
+        text-anchor="middle" letter-spacing="4" opacity="0.7">CHAPTER II  ·  THE ARSENAL</text>
 
-  <!-- Arrow 3 — medium speed, mid -->
-  <g filter="url(#arrowGlow)" opacity="0.75">
-    <line x1="-100" y1="55" x2="-40" y2="55" stroke="url(#shaftGold)" stroke-width="2" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="3.4s" begin="1.2s" repeatCount="indefinite"/>
-    </line>
-    <polygon points="-40,51 -40,59 -28,55" fill="#FFD700">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="3.4s" begin="1.2s" repeatCount="indefinite"/>
-    </polygon>
-  </g>
-
-  <!-- Arrow 4 — fastest -->
-  <g filter="url(#arrowGlow)" opacity="0.6">
-    <line x1="-100" y1="70" x2="-50" y2="70" stroke="url(#shaftGold)" stroke-width="1.5" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="2s" begin="1.8s" repeatCount="indefinite"/>
-    </line>
-    <polygon points="-50,67 -50,73 -40,70" fill="#FF8C00">
-      <animateTransform attributeName="transform" type="translate" from="-900,0" to="1800,0" dur="2s" begin="1.8s" repeatCount="indefinite"/>
-    </polygon>
-  </g>
-
-  <!-- Subtitle text overlay -->
-  <text x="450" y="58" font-family="Georgia, serif" font-size="13" fill="#FFF8DC"
-        text-anchor="middle" opacity="0.7" font-style="italic">
-    ❝ Shri Ram's bow never missed. Neither does my code. ❞
+  <!-- Section 1 title -->
+  <text x="450" y="90" font-family="Georgia, serif" font-size="18" font-weight="bold"
+        text-anchor="middle" fill="#FFD700" filter="url(#titleGlow)">
+    🏹 The Vedic Scrolls — Programming Languages
   </text>
+  <text x="450" y="108" font-family="Georgia, serif" font-size="11" font-style="italic"
+        text-anchor="middle" fill="#FFA500" opacity="0.7">
+    The sacred languages — root of all creation
+  </text>
+  <line x1="150" y1="116" x2="750" y2="116" stroke="#FFD700" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- LANGUAGE CARDS ROW — 6 cards -->
+  <!-- Card helper: each card 120w x 130h, starting x=45, gap=15 -->
+  <!-- Cards at y=128 -->
+
+  <!-- JS Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="45" y="128" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <!-- JS icon -->
+    <rect x="65" y="148" width="80" height="80" rx="8" fill="#F0DB4F"/>
+    <rect x="65" y="148" width="80" height="80" rx="8" fill="#F0DB4F"/>
+    <text x="130" y="198" font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="#323330" text-anchor="end">JS</text>
+    <line x1="65" y1="204" x2="105" y2="204" stroke="#323330" stroke-width="3"/>
+    <text x="105" y="245" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">JavaScript</text>
+  </g>
+
+  <!-- TS Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="180" y="128" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="200" y="148" width="80" height="80" rx="8" fill="#3178C6"/>
+    <text x="260" y="198" font-family="'Courier New', monospace" font-size="26" font-weight="bold" fill="white" text-anchor="end">TS</text>
+    <line x1="200" y1="204" x2="240" y2="204" stroke="white" stroke-width="3"/>
+    <text x="240" y="245" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">TypeScript</text>
+  </g>
+
+  <!-- Python Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="315" y="128" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="335" y="148" width="80" height="80" rx="8" fill="#1e1e2e"/>
+    <!-- Python snake icon simplified -->
+    <path d="M375,162 Q365,162 362,170 L362,183 Q362,188 368,188 L382,188 Q390,188 390,196 L390,209 Q390,216 382,216 L368,216 Q362,216 358,208" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M375,162 Q385,162 388,170 L388,183 Q388,188 382,188" stroke="#3776AB" stroke-width="2.5" fill="none"/>
+    <!-- Python logo simplified circles -->
+    <circle cx="370" cy="161" r="5" fill="#FFD700" opacity="0.9"/>
+    <circle cx="380" cy="217" r="5" fill="#3776AB" opacity="0.9"/>
+    <text x="375" y="245" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Python</text>
+  </g>
+
+  <!-- Java Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="450" y="128" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="470" y="148" width="80" height="80" rx="8" fill="#1e1e2e"/>
+    <!-- Java steam cup icon -->
+    <path d="M495,215 Q500,210 510,212 Q520,214 525,210 Q520,220 510,220 Q500,220 495,215Z" fill="#ED8B00"/>
+    <rect x="498" y="175" width="24" height="30" rx="4" fill="#5382A1"/>
+    <path d="M522,185 Q530,190 522,195" stroke="#ED8B00" stroke-width="2" fill="none"/>
+    <!-- steam lines -->
+    <path d="M504,172 Q502,166 504,160" stroke="#ED8B00" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M510,172 Q508,165 510,158" stroke="#ED8B00" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M516,172 Q514,166 516,161" stroke="#ED8B00" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <text x="510" y="245" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Java</text>
+  </g>
+
+  <!-- C++ Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="585" y="128" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="605" y="148" width="80" height="80" rx="8" fill="#00427E"/>
+    <text x="645" y="200" font-family="'Courier New', monospace" font-size="22" font-weight="bold" fill="white" text-anchor="middle">C++</text>
+    <text x="645" y="245" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">C++</text>
+  </g>
+
+  <!-- Go Card -->
+  <g filter="url(#cardShadow)">
+    <rect x="720" y="128" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="740" y="148" width="80" height="80" rx="8" fill="#00ADD8"/>
+    <text x="780" y="196" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="white" text-anchor="middle">≡Go</text>
+    <text x="780" y="210" font-family="'Courier New', monospace" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Go</text>
+    <text x="780" y="245" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Go (Golang)</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SECTION 2: PANCHASTRA — MERN FULL STACK               -->
+  <!--  Inspired by: Ram's 5 divine weapons (Panchayudha)      -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <line x1="40" y1="300" x2="860" y2="300" stroke="url(#sectionGold)" stroke-width="0.8"/>
+  <g transform="translate(450,300)">
+    <circle r="8" fill="#08000f" stroke="#FFD700" stroke-width="1"/>
+    <circle r="4" fill="#FFD700" opacity="0.9"/>
+  </g>
+
+  <text x="450" y="330" font-family="Georgia, serif" font-size="18" font-weight="bold"
+        text-anchor="middle" fill="#FFD700" filter="url(#titleGlow)">
+    ⚔️ Panchayudha — MERN Full Stack
+  </text>
+  <text x="450" y="348" font-family="Georgia, serif" font-size="11" font-style="italic"
+        text-anchor="middle" fill="#FFA500" opacity="0.7">
+    The five divine weapons of the full-stack warrior
+  </text>
+  <line x1="150" y1="356" x2="750" y2="356" stroke="#FFD700" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- MERN Row — 5 cards centered: x start = (900-5*120-4*22)/2 = (900-708)/2 = 96 -->
+  <!-- MongoDB -->
+  <g filter="url(#cardShadow)">
+    <rect x="60" y="368" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#4ea94b" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="80" y="388" width="80" height="80" rx="8" fill="#001e2b"/>
+    <!-- Mongo leaf icon -->
+    <path d="M120,398 Q128,410 128,425 Q128,440 120,448 Q112,440 112,425 Q112,410 120,398Z" fill="#4ea94b"/>
+    <line x1="120" y1="435" x2="120" y2="448" stroke="#4ea94b" stroke-width="2.5"/>
+    <text x="120" y="485" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">MongoDB</text>
+  </g>
+
+  <!-- Express -->
+  <g filter="url(#cardShadow)">
+    <rect x="198" y="368" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="218" y="388" width="80" height="80" rx="8" fill="#404040"/>
+    <text x="258" y="435" font-family="'Courier New', monospace" font-size="18" font-weight="bold" fill="white" text-anchor="middle">ex</text>
+    <text x="258" y="485" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Express.js</text>
+  </g>
+
+  <!-- React -->
+  <g filter="url(#cardShadow)">
+    <rect x="336" y="368" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#61DAFB" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="356" y="388" width="80" height="80" rx="8" fill="#20232a"/>
+    <!-- React atom icon -->
+    <circle cx="396" cy="428" r="6" fill="#61DAFB"/>
+    <ellipse cx="396" cy="428" rx="30" ry="10" stroke="#61DAFB" stroke-width="2" fill="none"/>
+    <ellipse cx="396" cy="428" rx="30" ry="10" stroke="#61DAFB" stroke-width="2" fill="none" transform="rotate(60,396,428)"/>
+    <ellipse cx="396" cy="428" rx="30" ry="10" stroke="#61DAFB" stroke-width="2" fill="none" transform="rotate(120,396,428)"/>
+    <text x="396" y="485" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">React.js</text>
+  </g>
+
+  <!-- Node.js -->
+  <g filter="url(#cardShadow)">
+    <rect x="474" y="368" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#6DA55F" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="494" y="388" width="80" height="80" rx="8" fill="#1a1a1a"/>
+    <!-- Node hexagon simplified -->
+    <polygon points="534,398 554,408 554,428 534,438 514,428 514,408" stroke="#6DA55F" stroke-width="2.5" fill="#1a1a1a"/>
+    <text x="534" y="425" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="#6DA55F" text-anchor="middle">node</text>
+    <text x="534" y="436" font-family="'Courier New', monospace" font-size="8" fill="#6DA55F" text-anchor="middle">js</text>
+    <text x="534" y="485" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Node.js</text>
+  </g>
+
+  <!-- HTML5 + CSS3 combined card -->
+  <g filter="url(#cardShadow)">
+    <rect x="612" y="368" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#E34F26" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="632" y="388" width="80" height="80" rx="8" fill="#1a1a1a"/>
+    <!-- HTML shield shape -->
+    <polygon points="672,398 688,400 686,420 672,424 658,420 656,400" fill="#E34F26"/>
+    <text x="672" y="416" font-family="'Courier New', monospace" font-size="10" font-weight="bold" fill="white" text-anchor="middle">HTML</text>
+    <text x="672" y="427" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="white" text-anchor="middle">5</text>
+    <!-- CSS shield -->
+    <polygon points="672,430 686,432 684,450 672,454 660,450 658,432" fill="#1572B6"/>
+    <text x="672" y="446" font-family="'Courier New', monospace" font-size="9" font-weight="bold" fill="white" text-anchor="middle">CSS 3</text>
+    <text x="672" y="485" font-family="Georgia, serif" font-size="12" fill="#FFF8DC" text-anchor="middle" font-weight="bold">HTML5 + CSS3</text>
+  </g>
+
+  <!-- Next.js card -->
+  <g filter="url(#cardShadow)">
+    <rect x="750" y="368" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.3"/>
+    <rect x="770" y="388" width="80" height="80" rx="8" fill="#000000"/>
+    <circle cx="810" cy="428" r="24" fill="black" stroke="white" stroke-width="1.5"/>
+    <text x="810" y="433" font-family="'Courier New', monospace" font-size="14" font-weight="bold" fill="white" text-anchor="middle">N</text>
+    <text x="810" y="485" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Next.js</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SECTION 3: CELESTIAL WEAPONS — Additional Tech         -->
+  <!--  Inspired by: Astras gifted by Sage Vishwamitra         -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <line x1="40" y1="540" x2="860" y2="540" stroke="url(#sectionGold)" stroke-width="0.8"/>
+  <g transform="translate(450,540)">
+    <circle r="8" fill="#08000f" stroke="#FFD700" stroke-width="1"/>
+    <circle r="4" fill="#FFD700" opacity="0.9"/>
+  </g>
+
+  <text x="450" y="570" font-family="Georgia, serif" font-size="18" font-weight="bold"
+        text-anchor="middle" fill="#FFD700" filter="url(#titleGlow)">
+    🔱 Celestial Astras — Backend &amp; Databases
+  </text>
+  <text x="450" y="588" font-family="Georgia, serif" font-size="11" font-style="italic"
+        text-anchor="middle" fill="#FFA500" opacity="0.7">
+    Astras gifted by Sage Vishwamitra — advanced weapons of craft
+  </text>
+  <line x1="150" y1="596" x2="750" y2="596" stroke="#FFD700" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Django -->
+  <g filter="url(#cardShadow)">
+    <rect x="60" y="608" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#092E20" stroke-width="0.8" stroke-opacity="0.8"/>
+    <rect x="80" y="628" width="80" height="80" rx="8" fill="#092E20"/>
+    <text x="120" y="678" font-family="'Courier New', monospace" font-size="28" font-weight="bold" fill="#44B78B" text-anchor="middle">dj</text>
+    <text x="120" y="725" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Django</text>
+  </g>
+
+  <!-- PostgreSQL -->
+  <g filter="url(#cardShadow)">
+    <rect x="198" y="608" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#336791" stroke-width="0.8" stroke-opacity="0.6"/>
+    <rect x="218" y="628" width="80" height="80" rx="8" fill="#1a2a4a"/>
+    <!-- Elephant icon simplified -->
+    <ellipse cx="258" cy="665" rx="18" ry="20" fill="#336791"/>
+    <path d="M240,660 Q232,655 234,668 Q236,678 244,678" fill="#336791"/>
+    <circle cx="252" cy="657" r="4" fill="#1a2a4a"/>
+    <text x="258" y="725" font-family="Georgia, serif" font-size="12" fill="#FFF8DC" text-anchor="middle" font-weight="bold">PostgreSQL</text>
+  </g>
+
+  <!-- Redis -->
+  <g filter="url(#cardShadow)">
+    <rect x="336" y="608" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#DC382D" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="356" y="628" width="80" height="80" rx="8" fill="#2a0a0a"/>
+    <!-- Redis star/logo simplified -->
+    <polygon points="396,635 400,648 414,648 403,656 407,670 396,662 385,670 389,656 378,648 392,648" fill="#DC382D"/>
+    <text x="396" y="725" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Redis</text>
+  </g>
+
+  <!-- GraphQL -->
+  <g filter="url(#cardShadow)">
+    <rect x="474" y="608" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#E10098" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="494" y="628" width="80" height="80" rx="8" fill="#1a0012"/>
+    <!-- GraphQL hexagon -->
+    <polygon points="534,636 548,644 548,660 534,668 520,660 520,644" stroke="#E10098" stroke-width="2.5" fill="none"/>
+    <circle cx="534" cy="636" r="4" fill="#E10098"/>
+    <circle cx="548" cy="644" r="4" fill="#E10098"/>
+    <circle cx="548" cy="660" r="4" fill="#E10098"/>
+    <circle cx="534" cy="668" r="4" fill="#E10098"/>
+    <circle cx="520" cy="660" r="4" fill="#E10098"/>
+    <circle cx="520" cy="644" r="4" fill="#E10098"/>
+    <text x="534" y="725" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">GraphQL</text>
+  </g>
+
+  <!-- REST APIs -->
+  <g filter="url(#cardShadow)">
+    <rect x="612" y="608" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect x="632" y="628" width="80" height="80" rx="8" fill="#1a1a0a"/>
+    <text x="672" y="668" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#FFD700" text-anchor="middle">{ REST }</text>
+    <text x="672" y="683" font-family="'Courier New', monospace" font-size="10" fill="#FFA500" text-anchor="middle">API</text>
+    <text x="672" y="725" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">REST APIs</text>
+  </g>
+
+  <!-- Mongoose -->
+  <g filter="url(#cardShadow)">
+    <rect x="750" y="608" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#800000" stroke-width="0.8" stroke-opacity="0.6"/>
+    <rect x="770" y="628" width="80" height="80" rx="8" fill="#1a0000"/>
+    <text x="810" y="668" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#CC0000" text-anchor="middle">mongoose</text>
+    <line x1="778" y1="678" x2="842" y2="678" stroke="#CC0000" stroke-width="1.5" opacity="0.6"/>
+    <text x="810" y="725" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Mongoose</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  SECTION 4: PUSHPAKA VIMANA — DevOps / Cloud           -->
+  <!--  Inspired by: Pushpaka Vimana — divine flying chariot   -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <line x1="40" y1="780" x2="860" y2="780" stroke="url(#sectionGold)" stroke-width="0.8"/>
+  <g transform="translate(450,780)">
+    <circle r="8" fill="#08000f" stroke="#FFD700" stroke-width="1"/>
+    <circle r="4" fill="#FFD700" opacity="0.9"/>
+  </g>
+
+  <text x="450" y="810" font-family="Georgia, serif" font-size="18" font-weight="bold"
+        text-anchor="middle" fill="#FFD700" filter="url(#titleGlow)">
+    🌅 Pushpaka Vimana — DevOps &amp; Tools
+  </text>
+  <text x="450" y="828" font-family="Georgia, serif" font-size="11" font-style="italic"
+        text-anchor="middle" fill="#FFA500" opacity="0.7">
+    The divine chariot — carrying code to the clouds
+  </text>
+  <line x1="150" y1="836" x2="750" y2="836" stroke="#FFD700" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Docker -->
+  <g filter="url(#cardShadow)">
+    <rect x="60" y="848" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#0db7ed" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="80" y="868" width="80" height="80" rx="8" fill="#0a1a2a"/>
+    <!-- Docker whale simplified -->
+    <rect x="96" y="898" width="48" height="28" rx="4" fill="#0db7ed"/>
+    <rect x="100" y="890" width="10" height="12" rx="2" fill="#0db7ed"/>
+    <rect x="114" y="886" width="10" height="16" rx="2" fill="#0db7ed"/>
+    <rect x="128" y="890" width="10" height="12" rx="2" fill="#0db7ed"/>
+    <path d="M96,926 Q110,935 128,926" stroke="#0db7ed" stroke-width="2" fill="none"/>
+    <text x="120" y="965" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Docker</text>
+  </g>
+
+  <!-- Kubernetes -->
+  <g filter="url(#cardShadow)">
+    <rect x="198" y="848" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#326ce5" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="218" y="868" width="80" height="80" rx="8" fill="#0a0a2a"/>
+    <!-- K8s helm wheel simplified -->
+    <circle cx="258" cy="908" r="18" stroke="#326ce5" stroke-width="2.5" fill="none"/>
+    <circle cx="258" cy="908" r="6" fill="#326ce5"/>
+    <line x1="258" y1="890" x2="258" y2="896" stroke="#326ce5" stroke-width="3"/>
+    <line x1="258" y1="920" x2="258" y2="926" stroke="#326ce5" stroke-width="3"/>
+    <line x1="240" y1="908" x2="246" y2="908" stroke="#326ce5" stroke-width="3"/>
+    <line x1="270" y1="908" x2="276" y2="908" stroke="#326ce5" stroke-width="3"/>
+    <line x1="245" y1="895" x2="249" y2="899" stroke="#326ce5" stroke-width="3"/>
+    <line x1="267" y1="917" x2="271" y2="921" stroke="#326ce5" stroke-width="3"/>
+    <line x1="271" y1="895" x2="267" y2="899" stroke="#326ce5" stroke-width="3"/>
+    <line x1="249" y1="917" x2="245" y2="921" stroke="#326ce5" stroke-width="3"/>
+    <text x="258" y="965" font-family="Georgia, serif" font-size="12" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Kubernetes</text>
+  </g>
+
+  <!-- Git -->
+  <g filter="url(#cardShadow)">
+    <rect x="336" y="848" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#F05032" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="356" y="868" width="80" height="80" rx="8" fill="#1a0a00"/>
+    <!-- Git icon simplified -->
+    <rect x="380" y="892" width="32" height="32" rx="4" fill="#F05032" transform="rotate(45,396,908)"/>
+    <circle cx="396" cy="896" r="4" fill="white"/>
+    <circle cx="396" cy="920" r="4" fill="white"/>
+    <circle cx="380" cy="908" r="4" fill="white"/>
+    <line x1="396" y1="900" x2="396" y2="916" stroke="white" stroke-width="2"/>
+    <line x1="396" y1="900" x2="383" y2="908" stroke="white" stroke-width="2"/>
+    <text x="396" y="965" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Git</text>
+  </g>
+
+  <!-- GitHub Actions -->
+  <g filter="url(#cardShadow)">
+    <rect x="474" y="848" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#2671E5" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="494" y="868" width="80" height="80" rx="8" fill="#0a0a1a"/>
+    <!-- Actions icon simplified -->
+    <circle cx="534" cy="900" r="12" stroke="#2671E5" stroke-width="2" fill="none"/>
+    <polygon points="530,895 530,905 540,900" fill="#2671E5"/>
+    <path d="M528,916 Q534,922 540,916" stroke="#2671E5" stroke-width="2" fill="none"/>
+    <text x="534" y="965" font-family="Georgia, serif" font-size="12" fill="#FFF8DC" text-anchor="middle" font-weight="bold">GH Actions</text>
+  </g>
+
+  <!-- Linux -->
+  <g filter="url(#cardShadow)">
+    <rect x="612" y="848" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FCC624" stroke-width="0.8" stroke-opacity="0.5"/>
+    <rect x="632" y="868" width="80" height="80" rx="8" fill="#1a1a00"/>
+    <!-- Tux penguin simplified -->
+    <ellipse cx="672" cy="900" rx="18" ry="22" fill="#1a1a1a"/>
+    <ellipse cx="672" cy="910" rx="12" ry="14" fill="#FFF8DC"/>
+    <circle cx="666" cy="896" r="3.5" fill="white"/>
+    <circle cx="678" cy="896" r="3.5" fill="white"/>
+    <circle cx="667" cy="896" r="2" fill="#1a1a1a"/>
+    <circle cx="679" cy="896" r="2" fill="#1a1a1a"/>
+    <path d="M668,902 Q672,906 676,902" stroke="#FCC624" stroke-width="1.5" fill="none"/>
+    <text x="672" y="965" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Linux</text>
+  </g>
+
+  <!-- Vercel/Render -->
+  <g filter="url(#cardShadow)">
+    <rect x="750" y="848" width="120" height="130" rx="10" fill="url(#cardBg)" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.4"/>
+    <rect x="770" y="868" width="80" height="80" rx="8" fill="#0a0a0a"/>
+    <!-- Vercel triangle -->
+    <polygon points="810,878 836,918 784,918" fill="white"/>
+    <text x="810" y="965" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" text-anchor="middle" font-weight="bold">Vercel</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  BOTTOM FOOTER QUOTE                                    -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+
+  <line x1="40" y1="1020" x2="860" y2="1020" stroke="url(#sectionGold)" stroke-width="0.8"/>
+  <g transform="translate(450,1020)">
+    <circle r="8" fill="#08000f" stroke="#FFD700" stroke-width="1"/>
+    <circle r="4" fill="#FFD700" opacity="0.9"/>
+  </g>
+
+  <text x="450" y="1055" font-family="Georgia, serif" font-size="13" font-style="italic"
+        text-anchor="middle" fill="#FFF8DC" opacity="0.75">
+    ❝ Like Ram's quiver — each weapon chosen with purpose, each skill mastered with devotion. ❞
+  </text>
+  <text x="450" y="1078" font-family="Georgia, serif" font-size="11"
+        text-anchor="middle" fill="#FFA500" opacity="0.55" letter-spacing="2">
+    — Valmiki Ramayana
+  </text>
+
+  <line x1="40" y1="1094" x2="860" y2="1094" stroke="url(#sectionGold)" stroke-width="0.5" opacity="0.4"/>
+
 </svg>
