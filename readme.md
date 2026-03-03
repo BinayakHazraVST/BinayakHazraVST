@@ -57,8 +57,36 @@ Spirit       : Open Source Contributor 🌍
 
 ![divider](./assets/divider.svg)
 
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--   CHAPTER III — FLYING SCROLL (CONNECT WITH ME)        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+![chapter5](./assets/chapter5_banner.svg)
+
+</div>
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/binayakhazra1)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:binayak.hazra2029@vedamsot.org)
+
+| Platform | Handle |
+|:---|:---|
+| 💼 **LinkedIn** | [linkedin.com/in/binayakhazra1](https://www.linkedin.com/in/binayakhazra1) |
+| 📧 **Email** | binayak.hazra2029@vedamsot.org |
+
+*Open to collaborations, project discussions, and open source contributions.*
+
+</div>
+
+---
+
+<div align="center">
+
+![divider](./assets/divider.svg)
+
 <!-- ════════════════════════════════════════════════ -->
-<!--   CHAPTER III — HANUMAN FLYING ACROSS           -->
+<!--   CHAPTER IV — HANUMAN FLYING ACROSS            -->
 <!-- ════════════════════════════════════════════════ -->
 
 ![chapter3](./assets/chapter3_banner.svg)
@@ -118,7 +146,7 @@ Spirit       : Open Source Contributor 🌍
 ![divider](./assets/divider.svg)
 
 <!-- ══════════════════════════════════════════════════ -->
-<!--   CHAPTER IV — RAM SETU BRIDGE BUILDS STONE BY STONE -->
+<!--   CHAPTER V — RAM SETU BRIDGE BUILDS STONE BY STONE -->
 <!-- ══════════════════════════════════════════════════ -->
 
 ![chapter4](./assets/chapter4_banner.svg)
@@ -147,34 +175,6 @@ Spirit       : Open Source Contributor 🌍
   🕊️  Believe in building in public and learning in public
   🕊️  Every contribution is an act of giving back
 ```
-
----
-
-<div align="center">
-
-![divider](./assets/divider.svg)
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!--   CHAPTER V — FLYING SCROLL (HANUMAN'S MESSAGE)        -->
-<!-- ═══════════════════════════════════════════════════════ -->
-
-![chapter5](./assets/chapter5_banner.svg)
-
-</div>
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/binayakhazra1)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:binayak.hazra2029@vedamsot.org)
-
-| Platform | Handle |
-|:---|:---|
-| 💼 **LinkedIn** | [linkedin.com/in/binayakhazra1](https://www.linkedin.com/in/binayakhazra1) |
-| 📧 **Email** | binayak.hazra2029@vedamsot.org |
-
-*Open to collaborations, project discussions, and open source contributions.*
-
-</div>
 
 ---
 
