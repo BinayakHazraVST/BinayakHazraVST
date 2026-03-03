@@ -1,0 +1,84 @@
+<svg width="900" height="130" viewBox="0 0 900 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyAchieve" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d000a"/>
+      <stop offset="100%" style="stop-color:#1a0518"/>
+    </linearGradient>
+    <filter id="hanuGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="130" fill="url(#skyAchieve)" rx="8"/>
+  <rect x="0" y="0" width="4" height="130" fill="#FFD700" rx="2"/>
+  <rect x="896" y="0" width="4" height="130" fill="#FFD700" rx="2"/>
+
+  <!-- Twinkling stars -->
+  <circle cx="60" cy="20" r="1.2" fill="#FFD700"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.1s" repeatCount="indefinite"/></circle>
+  <circle cx="200" cy="15" r="1" fill="#FFF" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="500" cy="25" r="1.2" fill="#FFD700"><animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="700" cy="18" r="1" fill="#FFF" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="840" cy="30" r="1.2" fill="#FFD700"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite"/></circle>
+
+  <!-- Chapter heading -->
+  <text x="450" y="32" font-family="Georgia, serif" font-size="11" fill="#FFA500" letter-spacing="4" text-anchor="middle" opacity="0.9">CHAPTER III  ·  ACHIEVEMENTS &amp; HONORS</text>
+  <line x1="180" y1="38" x2="720" y2="38" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Quote -->
+  <text x="450" y="65" font-family="Georgia, serif" font-size="14" fill="#FFF8DC"
+        text-anchor="middle" font-style="italic" opacity="0.85">
+    ❝ Ram earned his glory through discipline and devotion. ❞
+  </text>
+  <text x="450" y="85" font-family="Georgia, serif" font-size="13" fill="#FFA500"
+        text-anchor="middle" opacity="0.75">
+    Here are the fruits of mine.
+  </text>
+
+  <!-- Hanuman flying silhouette — animated left to right -->
+  <g filter="url(#hanuGlow)">
+    <!-- Glow trail -->
+    <ellipse cx="-60" cy="55" rx="35" ry="8" fill="#FF8C00" opacity="0.15">
+      <animateTransform attributeName="transform" type="translate" from="-120,0" to="1020,0" dur="6s" begin="0.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1"/>
+    </ellipse>
+
+    <!-- Hanuman body (flying pose) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="-120,0" to="1020,0" dur="6s" begin="0.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1"/>
+      <!-- Body -->
+      <ellipse cx="-80" cy="58" rx="10" ry="14" fill="#FF8C00" transform="rotate(-20,-80,58)"/>
+      <!-- Head -->
+      <circle cx="-68" cy="48" r="9" fill="#FFDAB9"/>
+      <!-- Face features -->
+      <circle cx="-66" cy="47" r="1.5" fill="#3d1c02"/>
+      <circle cx="-72" cy="47" r="1.5" fill="#3d1c02"/>
+      <path d="M-72,52 Q-69,55 -66,52" stroke="#3d1c02" stroke-width="1" fill="none"/>
+      <!-- Crown/mace -->
+      <line x1="-68" y1="39" x2="-65" y2="30" stroke="#FFD700" stroke-width="2"/>
+      <circle cx="-65" cy="28" r="4" fill="#FFD700"/>
+      <!-- Left arm stretched forward -->
+      <line x1="-75" y1="56" x2="-55" y2="50" stroke="#FFDAB9" stroke-width="4" stroke-linecap="round"/>
+      <!-- Right arm back -->
+      <line x1="-90" y1="56" x2="-108" y2="52" stroke="#FFDAB9" stroke-width="4" stroke-linecap="round"/>
+      <!-- Legs -->
+      <line x1="-82" y1="70" x2="-90" y2="82" stroke="#FF8C00" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-78" y1="70" x2="-72" y2="80" stroke="#FF8C00" stroke-width="5" stroke-linecap="round"/>
+      <!-- Tail (curled up) -->
+      <path d="M-90,62 Q-108,55 -106,42 Q-104,30 -95,32" stroke="#8B4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="-95" cy="30" r="3" fill="#8B4513"/>
+      <!-- Wing/cape effect -->
+      <path d="M-82,58 Q-92,42 -78,38 Q-68,42 -78,58Z" fill="#FF8C00" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Bottom decorative line -->
+  <line x1="20" y1="118" x2="880" y2="118" stroke="#FFD700" stroke-width="0.5" opacity="0.2"/>
+  <!-- Diamond ornaments -->
+  <polygon points="440,114 444,118 440,122 436,118" fill="#FFD700" opacity="0.5"/>
+  <polygon points="460,114 464,118 460,122 456,118" fill="#FFD700" opacity="0.3"/>
+  <polygon points="420,114 424,118 420,122 416,118" fill="#FFD700" opacity="0.3"/>
+</svg>

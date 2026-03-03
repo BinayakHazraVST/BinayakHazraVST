@@ -1,0 +1,98 @@
+<svg width="900" height="160" viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0010"/>
+      <stop offset="100%" style="stop-color:#0d000a"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Clip for left panel text reveal -->
+    <clipPath id="leftReveal">
+      <rect x="0" y="0" width="0" height="160">
+        <animate attributeName="width" from="0" to="520" dur="1.8s" begin="0.2s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+      </rect>
+    </clipPath>
+    <clipPath id="rightReveal">
+      <rect x="520" y="0" width="0" height="160">
+        <animate attributeName="width" from="0" to="380" dur="1.5s" begin="0.8s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect width="900" height="160" fill="url(#bg2)" rx="8"/>
+
+  <!-- Left border accent -->
+  <rect x="0" y="0" width="4" height="160" fill="#FFD700" rx="2"/>
+  <rect x="896" y="0" width="4" height="160" fill="#FFD700" rx="2"/>
+
+  <!-- Stars -->
+  <circle cx="30" cy="20" r="1" fill="#FFD700" opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="80" cy="50" r="1" fill="#FFF" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="860" cy="30" r="1" fill="#FFD700" opacity="0.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle>
+
+  <!-- Chapter label revealed -->
+  <g clip-path="url(#leftReveal)">
+    <text x="30" y="40" font-family="Georgia, serif" font-size="11" fill="#FFA500" letter-spacing="3" opacity="0.8">CHAPTER I</text>
+    <text x="30" y="78" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#FFD700" filter="url(#glow2)" letter-spacing="2">Who Am I?</text>
+    <text x="30" y="105" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" opacity="0.85" letter-spacing="0.5">Like Valmiki — transformed from wanderer to Adi Kavi —</text>
+    <text x="30" y="123" font-family="Georgia, serif" font-size="13" fill="#FFF8DC" opacity="0.85">I transform raw ideas into living, breathing applications.</text>
+    <!-- Gold underline -->
+    <line x1="30" y1="88" x2="280" y2="88" stroke="#FFD700" stroke-width="0.7" opacity="0.4"/>
+  </g>
+
+  <!-- Right: Stylized Ram silhouette with bow drawn -->
+  <g clip-path="url(#rightReveal)">
+    <!-- Glow behind figure -->
+    <ellipse cx="750" cy="110" rx="55" ry="18" fill="#FFD700" opacity="0.08">
+      <animate attributeName="opacity" values="0.06;0.14;0.06" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Ground/platform line -->
+    <line x1="680" y1="138" x2="820" y2="138" stroke="#FFD700" stroke-width="1" opacity="0.3"/>
+
+    <!-- Body (saffron robe) -->
+    <rect x="738" y="82" width="22" height="52" rx="4" fill="#FF8C00" opacity="0.9"/>
+
+    <!-- Head with crown -->
+    <circle cx="749" cy="68" r="13" fill="#FFDAB9"/>
+    <!-- Crown -->
+    <polygon points="736,62 743,52 749,58 755,52 762,62" fill="#FFD700" filter="url(#glow2)"/>
+    <circle cx="749" cy="52" r="2.5" fill="#FF4500"/>
+
+    <!-- Hair/choti -->
+    <path d="M749 55 Q754 45 756 42" stroke="#3d1c02" stroke-width="2" fill="none"/>
+
+    <!-- Left arm holding bow -->
+    <line x1="738" y1="96" x2="718" y2="105" stroke="#FFDAB9" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Right arm pulling string -->
+    <line x1="760" y1="96" x2="782" y2="88" stroke="#FFDAB9" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Bow (curved) -->
+    <path d="M718,72 Q700,105 718,138" stroke="#8B6914" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Bow string -->
+    <line x1="718" y1="72" x2="718" y2="138" stroke="#FFD700" stroke-width="1" opacity="0.8"/>
+
+    <!-- Arrow being drawn -->
+    <line x1="718" y1="105" x2="782" y2="88" stroke="#D4A017" stroke-width="2" stroke-dasharray="4,2">
+      <animate attributeName="stroke-dashoffset" from="0" to="12" dur="0.8s" repeatCount="indefinite"/>
+    </line>
+    <!-- Arrowhead -->
+    <polygon points="782,85 778,91 785,91" fill="#FFD700"/>
+
+    <!-- Decorative dots on robe -->
+    <circle cx="749" cy="95" r="2" fill="#FFD700" opacity="0.6"/>
+    <circle cx="749" cy="108" r="1.5" fill="#FFD700" opacity="0.4"/>
+
+    <!-- Aura rings -->
+    <circle cx="749" cy="100" r="45" stroke="#FFD700" stroke-width="0.5" fill="none" opacity="0.12">
+      <animate attributeName="r" values="45;52;45" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.06;0.12" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Divider between text and figure -->
+  <line x1="540" y1="20" x2="540" y2="140" stroke="#FFD700" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,4"/>
+</svg>

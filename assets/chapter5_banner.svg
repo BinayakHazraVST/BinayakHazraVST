@@ -1,0 +1,52 @@
+<svg width="900" height="100" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgConnect" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d000a"/>
+      <stop offset="50%" style="stop-color:#1c0015"/>
+      <stop offset="100%" style="stop-color:#0d000a"/>
+    </linearGradient>
+    <filter id="msgGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="100" fill="url(#bgConnect)" rx="8"/>
+  <rect x="0" y="0" width="4" height="100" fill="#FFD700" rx="2"/>
+  <rect x="896" y="0" width="4" height="100" fill="#FFD700" rx="2"/>
+
+  <!-- Stars twinkling -->
+  <circle cx="100" cy="15" r="1" fill="#FFD700"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="400" cy="10" r="1.2" fill="#FFF"><animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="700" cy="12" r="1" fill="#FFD700"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.9s" repeatCount="indefinite"/></circle>
+  <circle cx="850" cy="20" r="1.2" fill="#FFF"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.1s" repeatCount="indefinite"/></circle>
+
+  <!-- Chapter label -->
+  <text x="450" y="28" font-family="Georgia, serif" font-size="11" fill="#FFA500" letter-spacing="4" text-anchor="middle" opacity="0.9">CHAPTER V  ·  CONNECT WITH ME</text>
+  <line x1="200" y1="34" x2="700" y2="34" stroke="#FFD700" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Message/scroll icon animated -->
+  <g>
+    <!-- Scroll flying across from right to left (Hanuman's message delivery direction) -->
+    <g filter="url(#msgGlow)" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" from="1000,0" to="-200,0" dur="5s" begin="0.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.3 0 0.7 1"/>
+      <!-- Scroll body -->
+      <rect x="450" y="55" width="36" height="26" rx="3" fill="#FFF8DC" stroke="#D4A017" stroke-width="1"/>
+      <!-- Scroll lines -->
+      <line x1="454" y1="62" x2="482" y2="62" stroke="#8B6914" stroke-width="1.5"/>
+      <line x1="454" y1="67" x2="478" y2="67" stroke="#8B6914" stroke-width="1.5"/>
+      <line x1="454" y1="72" x2="480" y2="72" stroke="#8B6914" stroke-width="1.5"/>
+      <!-- Scroll rolls at ends -->
+      <ellipse cx="450" cy="68" rx="4" ry="10" fill="#D4A017"/>
+      <ellipse cx="486" cy="68" rx="4" ry="10" fill="#D4A017"/>
+      <!-- Glow around scroll -->
+      <ellipse cx="468" cy="68" rx="22" ry="14" fill="#FFD700" opacity="0.08"/>
+    </g>
+  </g>
+
+  <!-- Quote -->
+  <text x="450" y="72" font-family="Georgia, serif" font-size="13" fill="#FFF8DC"
+        text-anchor="middle" font-style="italic" opacity="0.8">
+    ❝ Hanuman crossed the ocean to deliver one message. Drop me yours. ❞
+  </text>
+</svg>
