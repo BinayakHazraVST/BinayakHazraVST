@@ -25,7 +25,6 @@
 Name         : Binayak Hazra
 Role         : Full Stack MERN Developer
 Institute    : Vedam School of Technology
-Achievement  : Academic Topper 🏆
 Craft        : Abacus Grandmaster 🧮
 Arena        : Competitive Programmer ⚔️
 Spirit       : Open Source Contributor 🌍
@@ -69,7 +68,7 @@ Spirit       : Open Source Contributor 🌍
 
 | 🎖️ Honor | 📌 Details |
 |:---|:---|
-| 🥇 **Academic Topper** | Vedam School of Technology — Ranked #1 |
+| 🥇 **Academic Topper** | Vedam School of Technology — Ranked #2 |
 | 🧮 **Abacus Grandmaster** | Highest rank in Mental Mathematics |
 | ⚔️ **Competitive Programmer** | Codeforces Active — **1007 Rating** |
 | 💻 **Full Stack Developer** | End-to-end MERN application builder |
