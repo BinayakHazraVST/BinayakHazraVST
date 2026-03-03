@@ -1,0 +1,272 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0005"/>
+      <stop offset="50%" style="stop-color:#1a0010"/>
+      <stop offset="100%" style="stop-color:#2d0820"/>
+    </linearGradient>
+    <linearGradient id="shaftGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B6914"/>
+      <stop offset="50%" style="stop-color:#D4A017"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+
+    <!--
+      CYCLE = 14s  (smooth, generous timing)
+      ─────────────────────────────────────────────────────
+      0.00 → 0.21  ( 0s  → 3s  )  Arrow flies left→right
+      0.21 → 0.28  ( 3s  → 4s  )  Title fades IN  (1s ease)
+      0.28 → 0.42  ( 4s  → 5.9s)  Subtitle 1 fades IN (staggered)
+      0.42 → 0.50  ( 5.9s→ 7s  )  Subtitle 2 fades IN (staggered)
+      0.50 → 0.69  ( 7s  → 11s )  All text holds fully visible  ← EXTENDED
+      0.69 → 0.81  (11s  → 13s )  ALL text fades OUT together (2s ease)
+      0.81 → 0.88  (13s  → 14s )  Arrow resets off-screen (hidden)
+      0.88 → 1.00  (14s  → 16s )  Full invisible pause before next loop
+      ─────────────────────────────────────────────────────
+    -->
+
+    <!-- Clip for lotus + underline only (not text — text uses opacity directly) -->
+    <clipPath id="revealDeco">
+      <rect x="0" y="0" height="280">
+        <animate attributeName="width"
+          values="0;0;900;900;0;0"
+          keyTimes="0;0.21;0.35;0.75;0.87;1"
+          dur="20s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0 0 1 1; 0.35 0 0.2 1; 0 0 1 1; 0.4 0 0.6 1; 0 0 1 1"/>
+      </rect>
+    </clipPath>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="280" fill="url(#sky)"/>
+
+  <!-- Stars — always visible, always twinkling -->
+  <g opacity="0.7">
+    <circle cx="50"  cy="20" r="1"   fill="#FFD700"><animate attributeName="opacity" values="0.3;1;0.3"   dur="2s"   repeatCount="indefinite"/></circle>
+    <circle cx="130" cy="45" r="1.5" fill="#FFF8DC"><animate attributeName="opacity" values="1;0.2;1"     dur="3s"   repeatCount="indefinite"/></circle>
+    <circle cx="220" cy="15" r="1"   fill="#FFD700"><animate attributeName="opacity" values="0.5;1;0.5"   dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="310" cy="35" r="1"   fill="#FFF8DC"><animate attributeName="opacity" values="1;0.3;1"     dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="400" cy="10" r="1.5" fill="#FFD700"><animate attributeName="opacity" values="0.4;1;0.4"   dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="480" cy="50" r="1"   fill="#FFF8DC"><animate attributeName="opacity" values="1;0.5;1"     dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="570" cy="22" r="1.5" fill="#FFD700"><animate attributeName="opacity" values="0.6;1;0.6"   dur="2s"   repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="38" r="1"   fill="#FFF8DC"><animate attributeName="opacity" values="1;0.4;1"     dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="12" r="1"   fill="#FFD700"><animate attributeName="opacity" values="0.3;1;0.3"   dur="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="820" cy="28" r="1.5" fill="#FFF8DC"><animate attributeName="opacity" values="1;0.2;1"     dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="870" cy="55" r="1"   fill="#FFD700"><animate attributeName="opacity" values="0.7;1;0.7"   dur="2s"   repeatCount="indefinite"/></circle>
+    <circle cx="90"  cy="70" r="1"   fill="#FFD700"><animate attributeName="opacity" values="1;0.3;1"     dur="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="760" cy="65" r="1.5" fill="#FFF8DC"><animate attributeName="opacity" values="0.5;1;0.5"   dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="60" r="1"   fill="#FFD700"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="80" r="1"   fill="#FFF8DC"><animate attributeName="opacity" values="0.6;1;0.6"   dur="2.3s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Lotus top ornament — uses clip -->
+  <g opacity="0.4" clip-path="url(#revealDeco)">
+    <path d="M390 55 Q400 45 410 55 Q400 50 390 55Z" fill="#FF8C00"/>
+    <path d="M395 55 Q400 42 405 55 Q400 48 395 55Z" fill="#FFD700"/>
+    <path d="M385 58 Q400 48 415 58" stroke="#FF8C00" stroke-width="0.5" fill="none"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN TITLE — fades in after arrow passes, fades out smoothly
+       In:  0.21 (3s) → 0.28 (3.9s)   ease-in  1s
+       Hold: 0.28 → 0.64 (9s)
+       Out: 0.64 (9s) → 0.78 (11s)    ease-out 2s  ← SMOOTH FADE
+       Off: 0.78 → 1.0
+       ═══════════════════════════════════════════════════════ -->
+  <text x="450" y="130" font-family="Georgia, serif" font-size="58" font-weight="bold"
+        text-anchor="middle" fill="#FFD700" filter="url(#softglow)" letter-spacing="3">
+    Binayak Hazra
+    <animate attributeName="opacity"
+      values="0; 0;   1;   1;   0;   0"
+      keyTimes="0; 0.21; 0.28; 0.75; 0.87; 1"
+      dur="20s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.4 0 0.2 1; 0 0 1 1; 0.3 0 0.1 1; 0 0 1 1"/>
+  </text>
+
+  <!-- Decorative underline — same timing as title -->
+  <line x1="200" y1="148" x2="700" y2="148" stroke="#FFD700" stroke-width="0.8">
+    <animate attributeName="opacity"
+      values="0; 0;    0.4;  0.4;  0;   0"
+      keyTimes="0; 0.24; 0.32; 0.75; 0.87; 1"
+      dur="20s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.4 0 0.2 1; 0 0 1 1; 0.3 0 0.1 1; 0 0 1 1"/>
+  </line>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SUBTITLE 1 — staggered after title, fades OUT with title
+       In:  0.28 (3.9s) → 0.36 (5s)   ease-in
+       Hold: 0.36 → 0.64
+       Out: 0.64 → 0.78   same fade-out as title
+       ═══════════════════════════════════════════════════════ -->
+  <text x="450" y="168" font-family="Georgia, serif" font-size="17"
+        text-anchor="middle" fill="#FFA500" letter-spacing="1.5">
+    Full Stack MERN Developer  ·  Competitive Programmer
+    <animate attributeName="opacity"
+      values="0; 0;    1;    1;    0;   0"
+      keyTimes="0; 0.28; 0.36; 0.75; 0.87; 1"
+      dur="20s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.4 0 0.2 1; 0 0 1 1; 0.3 0 0.1 1; 0 0 1 1"/>
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SUBTITLE 2 — staggered after subtitle 1, fades OUT with title
+       In:  0.35 (4.9s) → 0.44 (6.2s)
+       Hold: 0.44 → 0.64
+       Out: 0.64 → 0.78
+       ═══════════════════════════════════════════════════════ -->
+  <text x="450" y="194" font-family="Georgia, serif" font-size="15"
+        text-anchor="middle" fill="#FFD700" letter-spacing="1">
+    Abacus Grandmaster  ·  Vedam School of Technology
+    <animate attributeName="opacity"
+      values="0; 0;    1;    1;    0;   0"
+      keyTimes="0; 0.35; 0.44; 0.75; 0.87; 1"
+      dur="20s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.4 0 0.2 1; 0 0 1 1; 0.3 0 0.1 1; 0 0 1 1"/>
+  </text>
+
+  <!-- Bottom decorative diamonds -->
+  <g clip-path="url(#revealDeco)" opacity="0.35">
+    <line x1="0" y1="235" x2="900" y2="235" stroke="#FFD700" stroke-width="0.5"/>
+    <g fill="#FFD700">
+      <polygon points="100,235 105,230 110,235 105,240"/>
+      <polygon points="200,235 205,230 210,235 205,240"/>
+      <polygon points="300,235 305,230 310,235 305,240"/>
+      <polygon points="400,235 405,230 410,235 405,240"/>
+      <polygon points="500,235 505,230 510,235 505,240"/>
+      <polygon points="600,235 605,230 610,235 605,240"/>
+      <polygon points="700,235 705,230 710,235 705,240"/>
+      <polygon points="800,235 805,230 810,235 805,240"/>
+    </g>
+  </g>
+
+  <!-- Bottom quote — fades in mid-cycle, out with rest -->
+  <text x="450" y="258" font-family="Georgia, serif" font-size="12" font-style="italic"
+        text-anchor="middle" fill="#FFA500" letter-spacing="0.5">
+    ❝ Dharma protects those who protect Dharma — Valmiki Ramayana ❞
+    <animate attributeName="opacity"
+      values="0; 0;    0.75; 0.75; 0;   0"
+      keyTimes="0; 0.40; 0.50; 0.75; 0.87; 1"
+      dur="20s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.4 0 0.2 1; 0 0 1 1; 0.3 0 0.1 1; 0 0 1 1"/>
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FLYING ARROW
+       Flies 0s → 3s  (keyTimes 0 → 0.21)
+       Holds off-screen right 3s → 11s (0.21 → 0.78)
+       Snaps back left 11s → 12s (0.78 → 0.86) — hidden
+       Waits 12s → 14s (0.86 → 1.0) — ready to fire again
+       ═══════════════════════════════════════════════════════ -->
+  <g filter="url(#glow)">
+
+    <!-- Glow trail -->
+    <ellipse cy="108" rx="40" ry="6" fill="#FFD700">
+      <animate attributeName="cx"
+        values="-60; 960; 960; -60; -60"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <!-- Trail visible only while flying, invisible when parked -->
+      <animate attributeName="opacity"
+        values="0; 0.15; 0.05; 0; 0; 0"
+        keyTimes="0; 0.12; 0.21; 0.22; 0.93; 1"
+        dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Arrow shaft -->
+    <line y1="108" y2="108" stroke="url(#shaftGrad)" stroke-width="3" stroke-linecap="round">
+      <!-- Position -->
+      <animate attributeName="x1"
+        values="-20; 920; 920; -20; -20"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <animate attributeName="x2"
+        values="40; 980; 980; 40; 40"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <!-- Visible only while flying -->
+      <animate attributeName="opacity"
+        values="1; 1; 0; 0; 1"
+        keyTimes="0; 0.21; 0.22; 0.93; 1"
+        dur="20s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Arrowhead -->
+    <polygon fill="#FFD700">
+      <animate attributeName="points"
+        values="40,104 40,112 55,108; 960,104 960,112 975,108; 960,104 960,112 975,108; 40,104 40,112 55,108; 40,104 40,112 55,108"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <animate attributeName="opacity"
+        values="1; 1; 0; 0; 1"
+        keyTimes="0; 0.21; 0.22; 0.93; 1"
+        dur="20s" repeatCount="indefinite"/>
+    </polygon>
+
+    <!-- Feather top 1 -->
+    <path fill="#8B4513" opacity="0.9">
+      <animate attributeName="d"
+        values="M -20,108 Q -30,100 -20,104; M 920,108 Q 910,100 920,104; M 920,108 Q 910,100 920,104; M -20,108 Q -30,100 -20,104; M -20,108 Q -30,100 -20,104"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <animate attributeName="opacity"
+        values="0.9; 0.9; 0; 0; 0.9"
+        keyTimes="0; 0.21; 0.22; 0.93; 1"
+        dur="20s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Feather bottom 2 -->
+    <path fill="#8B4513" opacity="0.9">
+      <animate attributeName="d"
+        values="M -20,108 Q -30,116 -20,112; M 920,108 Q 910,116 920,112; M 920,108 Q 910,116 920,112; M -20,108 Q -30,116 -20,112; M -20,108 Q -30,116 -20,112"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <animate attributeName="opacity"
+        values="0.9; 0.9; 0; 0; 0.9"
+        keyTimes="0; 0.21; 0.22; 0.93; 1"
+        dur="20s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Feather top 3 -->
+    <path fill="#A0522D" opacity="0.8">
+      <animate attributeName="d"
+        values="M -28,108 Q -38,99 -27,104; M 912,108 Q 902,99 913,104; M 912,108 Q 902,99 913,104; M -28,108 Q -38,99 -27,104; M -28,108 Q -38,99 -27,104"
+        keyTimes="0; 0.21; 0.87; 0.93; 1"
+        dur="20s" repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.25 0 0.35 1; 0 0 1 1; 0.6 0 1 1; 0 0 1 1"/>
+      <animate attributeName="opacity"
+        values="0.8; 0.8; 0; 0; 0.8"
+        keyTimes="0; 0.21; 0.22; 0.93; 1"
+        dur="20s" repeatCount="indefinite"/>
+    </path>
+
+  </g>
+
+</svg>
