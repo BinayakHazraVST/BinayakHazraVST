@@ -57,7 +57,7 @@
   <line x1="40" y1="100" x2="860" y2="100" stroke="url(#sectionGold)" stroke-width="0.5" opacity="0.3"/>
 
   <text x="450" y="42" font-family="Georgia, serif" font-size="10" fill="#FFA500"
-        text-anchor="middle" letter-spacing="4" opacity="0.7">CHAPTER II  ·  THE ARSENAL</text>
+        text-anchor="middle" letter-spacing="4" opacity="0.7">CHAPTER III  ·  THE ARSENAL</text>
 
   <!-- Section 1 title -->
   <text x="450" y="90" font-family="Georgia, serif" font-size="18" font-weight="bold"

@@ -25,6 +25,7 @@
 Name         : Binayak Hazra
 Role         : Full Stack MERN Developer
 Institute    : Vedam School of Technology
+Achievement  : Academic Topper 🏆
 Craft        : Abacus Grandmaster 🧮
 Arena        : Competitive Programmer ⚔️
 Spirit       : Open Source Contributor 🌍
@@ -40,11 +41,11 @@ Spirit       : Open Source Contributor 🌍
 
 <div align="center">
 
-<!-- ══════════════════════════════════════ -->
-<!--   CHAPTER II — ARROWS FLY ACROSS     -->
-<!-- ══════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--   CHAPTER II — FLYING SCROLL (CONNECT WITH ME)           -->
+<!-- ══════════════════════════════════════════════════════════ -->
 
-![chapter2](./assets/chapter2_banner.svg)
+![chapter5](./assets/chapter5_banner.svg)
 
 </div>
 
@@ -56,11 +57,11 @@ Spirit       : Open Source Contributor 🌍
 
 ![divider](./assets/divider.svg)
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!--   CHAPTER III — FLYING SCROLL (CONNECT WITH ME)        -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════ -->
+<!--   CHAPTER III — THE ARSENAL          -->
+<!-- ══════════════════════════════════════ -->
 
-![chapter5](./assets/chapter5_banner.svg)
+![chapter2](./assets/chapter2_banner.svg)
 
 </div>
 
@@ -96,7 +97,7 @@ Spirit       : Open Source Contributor 🌍
 
 | 🎖️ Honor | 📌 Details |
 |:---|:---|
-| 🥇 **Academic Topper** | Vedam School of Technology — Ranked #2 |
+| 🥇 **Academic Topper** | Vedam School of Technology — Ranked #1 |
 | 🧮 **Abacus Grandmaster** | Highest rank in Mental Mathematics |
 | ⚔️ **Competitive Programmer** | Codeforces Active — **1007 Rating** |
 | 💻 **Full Stack Developer** | End-to-end MERN application builder |
