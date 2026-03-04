@@ -25,7 +25,6 @@
 Name         : Binayak Hazra
 Role         : Full Stack MERN Developer
 Institute    : Vedam School of Technology
-Achievement  : Academic Topper 🏆
 Craft        : Abacus Grandmaster 🧮
 Arena        : Competitive Programmer ⚔️
 Spirit       : Open Source Contributor 🌍
@@ -49,6 +48,17 @@ Spirit       : Open Source Contributor 🌍
 
 </div>
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/binayakhazra1)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:binayak.hazra2029@vedamsot.org)
+
+| Platform | Handle |
+|:---|:---|
+| 💼 **LinkedIn** | [linkedin.com/in/binayakhazra1](https://www.linkedin.com/in/binayakhazra1) |
+| 📧 **Email** | binayak.hazra2029@vedamsot.org |
+
+*Open to collaborations, project discussions, and open source contributions.*
+
+</div>
 
 
 ---
@@ -66,18 +76,6 @@ Spirit       : Open Source Contributor 🌍
 </div>
 
 <div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/binayakhazra1)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:binayak.hazra2029@vedamsot.org)
-
-| Platform | Handle |
-|:---|:---|
-| 💼 **LinkedIn** | [linkedin.com/in/binayakhazra1](https://www.linkedin.com/in/binayakhazra1) |
-| 📧 **Email** | binayak.hazra2029@vedamsot.org |
-
-*Open to collaborations, project discussions, and open source contributions.*
-
-</div>
 
 ---
 
@@ -97,7 +95,7 @@ Spirit       : Open Source Contributor 🌍
 
 | 🎖️ Honor | 📌 Details |
 |:---|:---|
-| 🥇 **Academic Topper** | Vedam School of Technology — Ranked #1 |
+| 🥇 **Academic Topper** | Vedam School of Technology — Ranked #2 |
 | 🧮 **Abacus Grandmaster** | Highest rank in Mental Mathematics |
 | ⚔️ **Competitive Programmer** | Codeforces Active — **1007 Rating** |
 | 💻 **Full Stack Developer** | End-to-end MERN application builder |
