@@ -48,6 +48,8 @@ Spirit       : Open Source Contributor 🌍
 
 </div>
 
+<div align="center">
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/binayakhazra1)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:binayak.hazra2029@vedamsot.org)
 
@@ -75,7 +77,7 @@ Spirit       : Open Source Contributor 🌍
 
 </div>
 
-<div align="center">
+
 
 ---
 
